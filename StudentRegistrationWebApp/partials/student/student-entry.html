@@ -1,0 +1,76 @@
+﻿<!--<h1>save your detail</h1>
+<form name="student" ng-submit="std.Save()">
+    <div style="padding:5px">
+        Name : <input type="text" ng-model="std.Student.Name" /><br />
+    </div>
+    <div style="padding:5px">
+        Phone : <input type="text" ng-model="std.Student.Phone" /><br />
+    </div>
+    <div style="padding:5px">
+        Email : <input type="text" ng-model="std.Student.Email" /><br />
+    </div>
+    <div style="padding:5px">
+        City : <input type="text" ng-model="std.Student.City" /><br />
+    </div>
+    <div style="padding:5px">
+        Address : <input type="text" ng-model="std.Student.Address" /><br />
+    </div>
+    <input type="submit" value="Save" />
+</form>-->
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-xs-12">
+            <h3>
+                Register a student
+            </h3>
+
+            <form role="form" ng-submit="std.SaveAfterValidation()">
+                <div class="form-group">
+                    <label for="txtName">
+                        Name
+                    </label>
+                    <input type="text" class="form-control" id="txtName" ng-model="std.Student.Name">
+                </div>
+                <div class="form-group">
+
+                    <label for="txtPhone">
+                        Phone
+                    </label>
+                    <input type="tel" class="form-control" id="txtPhone" ng-model="std.Student.Phone">
+                </div>
+                <div class="form-group">
+                    <label for="txtEmail">
+                        Email address
+                    </label>
+                    <input type="email" class="form-control" id="txtEmail" ng-model="std.Student.Email">
+                </div>
+                <div class="form-group">
+
+                    <label for="txtCity">
+                        City
+                    </label>
+                    <input type="text" class="form-control" id="txtCity" ng-model="std.Student.City">
+                </div>
+                <div class="form-group">
+
+                    <label for="txtAddress">
+                        Address
+                    </label>
+                    <input type="text" class="form-control" id="txtAddress" ng-model="std.Student.Address">
+                </div>
+                <ul class="{{std.statusClass}}">
+                    <li ng-repeat="str in std.ErrorOrSuccessList">
+                        {{str}}
+                    </li>
+                </ul>
+                <button type="submit" class="btn btn-primary" ng-disabled="std.isSaving">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
